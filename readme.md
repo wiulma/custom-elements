@@ -23,7 +23,7 @@ rm -R dist && npm run build && cd dist && npx serve
 ```
 
 ### Data
-In order to test frontend, you can use these stubbed login data:
+In order to test frontend, you can use these test login data:
 ```
 username:admin
 pwd:admin

@@ -1,0 +1,99 @@
+@import "@material/textfield/mdc-text-field";
+@import "@material/button/mdc-button";
+@import "@material/snackbar/mdc-snackbar";
+@import "./scss/fontawesome.scss";
+@import "./scss/fa-solid.scss";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding-top: 0.1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.private {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+// Login page styles
+
+.header {
+  text-align: center;
+}
+
+.private #main {
+  width: 100%;
+  height: 100%;
+}
+
+.main-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.shrine-logo {
+  width: 150px;
+  height: 150px;
+  padding-top: 80px;
+  fill: currentColor;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 300px;
+  margin: auto;
+}
+
+.button-container button {
+  margin: 3px;
+}
+
+.mdc-snackbar.error {
+  background-color: #B00020;
+}
+
+.mdc-snackbar.success {
+  background-color: #1B5E20;
+}
+
+
+.mdc-snackbar--align-end {
+  @media (min-width: $mdc-snackbar-tablet-breakpoint) {
+    @include mdc-rtl-reflexive-position(right, 24px);
+
+    bottom: 24px;
+    transform: translate(0, 200%);
+  }
+
+  @media (max-width: ($mdc-snackbar-tablet-breakpoint - 1)) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translate(0, 100%);
+  }
+}
+
+.mdc-snackbar--active {
+  &:not(.mdc-snackbar--align-end) {
+    transform: translate(-50%, 0);
+
+    @media (max-width: ($mdc-snackbar-tablet-breakpoint - 1)) {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transform: translate(0);
+    }
+  }
+}
+
+.mdc-snackbar--active:not(.mdc-snackbar--align-start) {
+  transform: translate(0, 0);
+}

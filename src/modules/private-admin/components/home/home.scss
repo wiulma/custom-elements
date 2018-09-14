@@ -1,0 +1,35 @@
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+@import "@material/toolbar/mdc-toolbar";
+@import "@material/ripple/mdc-ripple";
+
+app-home {
+  width: 100%;
+  height: 100%;
+}
+
+.mdc-toolbar .home-menu {
+  @include mdc-ripple-surface;
+  @include mdc-ripple-radius-bounded;
+  @include mdc-states;
+}
+
+.home-content {
+  display: inline-flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.home-content .mdc-toolbar__section--align-start {
+  align-items: center;
+}
+
+.home-content header {
+  background-color: var(--mdc-theme-primary,#6200ee)
+}
+
+.home-main {
+  padding: 16px;
+}

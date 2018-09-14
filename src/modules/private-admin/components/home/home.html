@@ -1,0 +1,36 @@
+<div class="main-wrap">
+  <aside class="mdc-drawer mdc-drawer--persistent home-drawer">
+    <nav class="mdc-drawer__drawer">
+      <div class="mdc-drawer__toolbar-spacer">
+          <span class="mdc-toolbar__title">DemoApp</span>
+      </div>
+      <div class="mdc-list-group">
+        <nav class="mdc-list">
+          <a class="mdc-list-item mdc-list-item--selected home-drawer-list-item" href="#private/dashboard" data-navigo>
+              <i class="fas fa-home"></i>Home
+          </a>
+        </nav>
+        <hr class="mdc-list-divider">
+        <nav class="mdc-list">
+          <a class="mdc-list-item home-drawer-list-item" href="#private/settings" data-navigo>
+              <i class="fas fa-cog"></i>Settings
+          </a>
+        </nav>
+      </div>
+    </nav>
+  </aside>
+  <div class="home-content">
+    <header class="mdc-toolbar mdc-elevation--z4">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <a class="home-menu"><i class="fas fa-bars"></i></a>
+          <span class="mdc-toolbar__title catalog-title">Private Area</span>
+        </section>
+      </div>
+    </header>
+
+    <main id="main-content" class="home-main">
+      <app-dashboard></app-dashboard>
+    </main>
+  </div>
+</div>
